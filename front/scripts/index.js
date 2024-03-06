@@ -1,11 +1,17 @@
-$.get("https://students-api.2.us-1.fl0.io/movies", (data) => {
-  const nuevoArrayPelicula = data.map((pelicula) =>
-    plantillaPeliculas(pelicula)
-  );
-  nuevoArrayPelicula.forEach((pelicula) => {
-    moviesContainer.appendChild(pelicula);
-  });
-});
+// $.get("https://students-api.2.us-1.fl0.io/movies", (data) => {
+//   const nuevoArrayPelicula = data.map((pelicula) =>
+//     plantillaPeliculas(pelicula)
+//   );
+//   nuevoArrayPelicula.forEach((pelicula) => {
+//     moviesContainer.appendChild(pelicula);
+//   });
+// });
+
+/////////////////////////////////////////////////////////////
+
+$.get("https://students-api.2.us-1.fl0.io/movies", (data) =>
+  data.forEach(plantillaPeliculas)
+);
 
 const moviesContainer = document.getElementById("infoPelicula");
 
@@ -21,7 +27,7 @@ function plantillaPeliculas(pelicula) {
     <p><strong>Género:</strong> ${pelicula.genre.join(", ")}</p>
     <p><strong>Rate:</strong> ${pelicula.rate}</p>
     `;
-  return contenedorPelicula;
+  moviesContainer.appendChild(contenedorPelicula);
 }
 
 ///////////////////////////////////////////
