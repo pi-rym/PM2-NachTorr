@@ -5,6 +5,7 @@ class CarritoCompra {
   agregarProducto(product) {
     this.products.push(product);
   }
+
   calcularTotal() {
     let total = 0;
 
@@ -13,6 +14,7 @@ class CarritoCompra {
     }
     return total;
   }
+
   aplicarDescuento(porcentaje) {
     const subTotal = this.calcularTotal();
     const descuento = this.calcularTotal() * (porcentaje / 100);
