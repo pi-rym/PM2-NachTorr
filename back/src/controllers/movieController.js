@@ -1,15 +1,9 @@
 const movieService = require("../services/movieService");
+const catchAsync = require("../utils/catchAsync");
 
 const getAllmovies = async (req, res) => {
-  try {
-    console.log("Esto es queries", req.query);
-    const movies = await movieService.getMovies();
-    res.status(200).json(movies);
-  } catch (error) {
-    res.status(418).json({
-      error: "No se pudieron cargar las películas",
-    });
-  }
+  const movies = await movieService.getMovies();
+  res.status(200).json(movies);
 };
 
 const getMovieById = async (req, res) => {
@@ -25,28 +19,22 @@ const getMovieByTitle = async (req, res) => {
 };
 
 const createMovie = async (req, res) => {
-  try {
-    const { title, year, director, duration, genre, rate, poster } = req.body;
-    const newMovie = await movieService.createMovie({
-      title,
-      year,
-      director,
-      duration,
-      genre,
-      rate,
-      poster,
-    });
-    res.status(200).json(newMovie);
-  } catch (error) {
-    res.status(400).json({
-      error: "No se pudo crear la película",
-    });
-  }
+  const { title, year, director, duration, genre, rate, poster } = req.body;
+  const newMovie = await movieService.createMovie({
+    title,
+    year,
+    director,
+    duration,
+    genre,
+    rate,
+    poster,
+  });
+  res.status(200).json(newMovie);
 };
 
 module.exports = {
-  getAllmovies,
-  getMovieById,
-  getMovieByTitle,
-  createMovie,
+  getAllmovies: catchAsync(getAllmovies),
+  getMovieById: catchAsync(getMovieById),
+  getMovieByTitle: catchAsync(getMovieByTitle),
+  createMovie: catchAsync(createMovie),
 };
