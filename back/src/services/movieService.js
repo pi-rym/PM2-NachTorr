@@ -1,22 +1,30 @@
 const Movie = require("../models/Movie");
 
-module.exports = {
-  getMovies: async () => {
-    const movies = await Movie.find();
-    return movies;
-  },
+const getMovies = async () => {
+  const movies = await Movie.find();
+  return movies;
+};
 
-  createMovie: async (title, year, director, duration, genre, rate, poster) => {
-    await Movie.create({
-      title,
-      year,
-      director,
-      duration,
-      genre,
-      rate,
-      poster,
-    });
-  },
+const getMovieById = async (id) => {
+  const movie = await Movie.findById(id);
+  return movie;
+};
+
+const findMovieByTitle = async (title) => {
+  const movie = await Movie.findOne({ title });
+  return movie;
+};
+
+const createMovie = async (movie) => {
+  const newMovie = await Movie.create(movie);
+  return newMovie;
+};
+
+module.exports = {
+  getMovies,
+  getMovieById,
+  findMovieByTitle,
+  createMovie,
 };
 
 // class MovieCard {
