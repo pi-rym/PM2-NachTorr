@@ -17,19 +17,24 @@
     <div class="general">
       <div class="cajaContenidos">
         <div>
-          <div>
-            <h1 class="nombrePagina">Películas Henry</h1>
+          <div
+            style="background: url(../styles/img/Header.png)"
+            class="imagen-header jumbotron jumbotron-fluid bg-cover text-white"
+          >
+            <div class="container py-5 text-center">
+              <h1 class="display-4 font-weight-bold">Películas Henry</h1>
+              <p class="font-italic mb-0">
+                Bienvenidos al proyecto final del segundo módulo de Henry
+              </p>
+            </div>
           </div>
           <!--BARRA DE NAVEGACIÓN-->
           <nav
-            class="navbar navbar-expand-md navbar-light bg-light border-3 border-bottom border-primary"
+            class="prueba-nav navbar navbar-expand-sm navbar-dark bg-black py-0 px-0 border-3 border-bottom border-secondary"
           >
             <div class="container-fluid">
               <a href="../index.html" class="navbar-brand"
-                ><img
-                  class="navbar-img"
-                  src="../styles/img/navBarIMG.png"
-                  alt=""
+                ><img class="navbar-img" src="../styles/img/navBarIMG.png" alt=""
               /></a>
               <button
                 type="button"
@@ -39,7 +44,10 @@
               >
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div id="MenuNavegacion" class="collapse navbar-collapse">
+              <div
+                id="MenuNavegacion"
+                class="nav-elements collapse navbar-collapse font-weight-bold"
+              >
                 <ul class="navbar-nav ms-3">
                   <li class="nav-item">
                     <a class="nav-link" href="../index.html">Home</a>
@@ -48,16 +56,12 @@
                     <a class="nav-link" href="#">Historia del Cine</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../pages/sobreMi.html"
-                      >Sobre mí</a
-                    >
+                    <a class="nav-link" href="../pages/sobreMi.html">Sobre mí</a>
                   </li>
                 </ul>
                 <ul class="navbar-nav ms-3">
                   <li class="nav-item">
-                    <a class="nav-link text-newrap" href="./formulario.html"
-                      >Agregar Película</a
-                    >
+                    <a class="nav-link text-newrap" href="./formulario.html">Agregar Película</a>
                   </li>
                 </ul>
               </div>
@@ -66,47 +70,37 @@
           <div class="container">
             <div class="row">
               <p class="historia-bloque">
-                La historia del cine como espectáculo comenzó en París el 28 de
-                diciembre de 1895. Desde entonces ha experimentado una serie de
-                cambios en varios sentidos. Por un lado, la tecnología del
-                cinematógrafo ha evolucionado mucho, desde sus inicios con el
-                cine mudo de los hermanos Lumière hasta el cine digital del
-                siglo xxi. Por otro lado, ha evolucionado el lenguaje
-                cinematográfico, incluidas las convenciones del género, y el uso
-                de planos visuales. Además han surgido así distintos géneros
-                cinematográficos y en último lugar, ha evolucionado con la
-                sociedad, desarrollándose distintos movimientos
-                cinematográficos. El inicio del cine Primeros pasos del cine:
-                creación del cinematógrafo Artículo principal: Cine mudo La idea
-                de capturar, crear y reproducir el movimiento por medios
-                mecánicos es muy antigua, y existieron antecedentes tales como
-                la cámara oscura, el taumatropo, la linterna mágica o el fusil
-                fotográfico. La técnica para captar la realidad por medios
-                luminosos había sido ya desarrollada por los inventores del
-                daguerrotipo y la fotografía, a mediados del siglo xix. Thomas
-                Alva Edison, inventor de la lámpara incandescente y el
-                fonógrafo, estuvo muy cerca también de inventar el cine, al
-                patentar el Quinetoscopio creado en su laboratorio por William
-                Dickson, una máquina que solo permitía funciones limitadas.1​
-                Inspirándose en este e integrando diversos inventos y
-                descubrimientos de la época, como el rollo de fotos de Eastman,
-                los hermanos Lumière (hijos del fotógrafo Antoine Lumière)
-                crearon el cinematógrafo: este dispositivo permitía la toma,
-                proyección y hasta el copiado de imágenes en movimiento, así
-                como el espectáculo público derivado de la exhibición del
-                funcionamiento del aparato. Sin embargo es muy probable que el
-                verdadero inventor del cine fuese Louis Le Prince, el cual
-                realizó su primera película en 1888.2​ La primera presentación
-                de los hermanos Lumière fue el 28 de diciembre de 1895 en París
-                y consistió en una serie de imágenes documentales, de las cuales
-                se recuerda aquella en la que aparecen los trabajadores de una
-                fábrica (propiedad de los mismos Lumière), y la de un tren (en
-                la estación de La Ciotat) que parecía abalanzarse sobre los
-                espectadores; ante estas imágenes las personas reaccionaron con
-                un instintivo pavor, creyendo que el tren los atropellaría. La
-                función de las primeras "películas" era mayormente documental,
-                con el agregado del movimiento. Tiempo después lograron el
-                primer filme argumental de la historia, El regador regado.
+                La historia del cine como espectáculo comenzó en París el 28 de diciembre de 1895.
+                Desde entonces ha experimentado una serie de cambios en varios sentidos. Por un
+                lado, la tecnología del cinematógrafo ha evolucionado mucho, desde sus inicios con
+                el cine mudo de los hermanos Lumière hasta el cine digital del siglo xxi. Por otro
+                lado, ha evolucionado el lenguaje cinematográfico, incluidas las convenciones del
+                género, y el uso de planos visuales. Además han surgido así distintos géneros
+                cinematográficos y en último lugar, ha evolucionado con la sociedad, desarrollándose
+                distintos movimientos cinematográficos. El inicio del cine Primeros pasos del cine:
+                creación del cinematógrafo Artículo principal: Cine mudo La idea de capturar, crear
+                y reproducir el movimiento por medios mecánicos es muy antigua, y existieron
+                antecedentes tales como la cámara oscura, el taumatropo, la linterna mágica o el
+                fusil fotográfico. La técnica para captar la realidad por medios luminosos había
+                sido ya desarrollada por los inventores del daguerrotipo y la fotografía, a mediados
+                del siglo xix. Thomas Alva Edison, inventor de la lámpara incandescente y el
+                fonógrafo, estuvo muy cerca también de inventar el cine, al patentar el
+                Quinetoscopio creado en su laboratorio por William Dickson, una máquina que solo
+                permitía funciones limitadas.1​ Inspirándose en este e integrando diversos inventos
+                y descubrimientos de la época, como el rollo de fotos de Eastman, los hermanos
+                Lumière (hijos del fotógrafo Antoine Lumière) crearon el cinematógrafo: este
+                dispositivo permitía la toma, proyección y hasta el copiado de imágenes en
+                movimiento, así como el espectáculo público derivado de la exhibición del
+                funcionamiento del aparato. Sin embargo es muy probable que el verdadero inventor
+                del cine fuese Louis Le Prince, el cual realizó su primera película en 1888.2​ La
+                primera presentación de los hermanos Lumière fue el 28 de diciembre de 1895 en París
+                y consistió en una serie de imágenes documentales, de las cuales se recuerda aquella
+                en la que aparecen los trabajadores de una fábrica (propiedad de los mismos
+                Lumière), y la de un tren (en la estación de La Ciotat) que parecía abalanzarse
+                sobre los espectadores; ante estas imágenes las personas reaccionaron con un
+                instintivo pavor, creyendo que el tren los atropellaría. La función de las primeras
+                "películas" era mayormente documental, con el agregado del movimiento. Tiempo
+                después lograron el primer filme argumental de la historia, El regador regado.
               </p>
             </div>
           </div>

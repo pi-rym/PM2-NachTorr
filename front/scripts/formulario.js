@@ -34,15 +34,16 @@ const botonEnviar = () => {
   ) {
     return window.alert("¡Debes completar todos los datos!");
   } else {
-    api.createMovie(
-      titleValor,
-      yearValor,
-      directorValor,
-      durationValor,
-      genreValor,
-      rateValor,
-      posterValor
-    );
+    window.alert("Película creada con éxito"),
+      api.createMovie(
+        titleValor,
+        yearValor,
+        directorValor,
+        durationValor,
+        genreValor,
+        rateValor,
+        posterValor
+      );
   }
 };
 
