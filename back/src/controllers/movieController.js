@@ -19,6 +19,7 @@ const getMovieByTitle = async (req, res) => {
 };
 
 const createMovie = async (req, res) => {
+  console.log(req.body);
   const { title, year, director, duration, genre, rate, poster } = req.body;
   const newMovie = await movieService.createMovie({
     title,
@@ -29,7 +30,7 @@ const createMovie = async (req, res) => {
     rate,
     poster,
   });
-  res.status(200).json(newMovie);
+  res.status(201).send("¡Película creada con éxito!");
 };
 
 module.exports = {

@@ -1,8 +1,11 @@
 module.exports = {
-  entry: "./scripts/index.js",
+  entry: {
+    formulario: "./scripts/formulario.js",
+    peliculas: "./scripts/peliculas.js",
+  },
 
   output: {
     path: __dirname + "/public",
-    filename: "bundle.js",
+    filename: "[name].js",
   },
 };
